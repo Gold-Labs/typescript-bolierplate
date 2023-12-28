@@ -10,7 +10,9 @@
     "dev": "tsx watch ./src/main.ts"
   },
   "engines": {
-    "node": ">=18.16.0"
+    "node": ">=18.17.0",
+    "npm": "please-use-yarn",
+    "pnpm": "please-use-yarn"
   },
   "devDependencies": {
     "@types/jest": "29.5.3",
