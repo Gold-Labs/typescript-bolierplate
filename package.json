@@ -11,8 +11,7 @@
   },
   "engines": {
     "node": ">=18.17.0",
-    "npm": "please-use-yarn",
-    "pnpm": "please-use-yarn"
+    "npm": "please-use-yarn"
   },
   "devDependencies": {
     "@types/jest": "29.5.3",
