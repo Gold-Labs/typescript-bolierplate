@@ -4,14 +4,16 @@
 clone을 하고나서 yarn과 npm 둘중 선호하는 것을 이용해서 install을 해줍니다.
 
 ```bash
-yarn install  // yarn 일 경우
 npm install   // npm 일 경우
+yarn install  // yarn 일 경우
 ```
 
 ## Recommendations
 - IDE - vscode
-- node -v 18.16.0
+- node -v 18.17.0
 - src/main.ts  -> default configuration
+- fnm - node version manager
+- yarn
 
 ## Explanation
 
@@ -28,10 +30,6 @@ airbnb를 사용했습니다. 기본적으로 리액트가 아닌 node에 초점
 
 https://github.com/eslint/eslint
 
-### 3. nodemon
-nodemon.json을 통해서 nodemon의 설정을 바꿀 수 있습니다.<br>
-기본적으로 ts,json만 변화를 감지하도록 했습니다.
-https://github.com/remy/nodemon#nodemon
 
 ## Usage
 
