@@ -20,7 +20,7 @@ pre-commit:
       run: yarn eslint {staged_files}
     types:
       glob: "*.{js,ts, jsx, tsx}"
-      run: npx tsc --noEmit
+      run: npx tsc --noEmit    
 #     rubocop:
 #       tags: backend style
 #       glob: "*.rb"
@@ -36,3 +36,8 @@ pre-commit:
 #       runner: node
 #     "any.go":
 #       runner: go run
+commit-msg:
+  parallel: true
+  commands:
+    commitlint:
+      run: npx commitlint --edit
