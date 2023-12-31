@@ -11,8 +11,7 @@
     "start": "npm run build && node ./dist/main.js",
     "test": "jest",
     "dev": "npm run typecheck -- --watch & tsx watch ./src/main.ts",
-    "clean": "rm -rf dist ./dist",
-    "dev:cli": "node bin/start.js"
+    "clean": "rm -rf dist ./dist"
   },
   "bin": {
     "create-typescript-boilerplate": "bin/cli.js"
@@ -45,8 +44,5 @@
     "extends": [
       "@commitlint/config-conventional"
     ]
-  },
-  "dependencies": {
-    "gluegun": "^5.1.6"
   }
 }
