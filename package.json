@@ -50,5 +50,8 @@
   },
   "dependencies": {
     "gluegun": "^5.1.6"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
   }
 }
