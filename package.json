@@ -1,6 +1,6 @@
 {
   "name": "create-typescript-boilerplate",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "boilerplate for typescript project",
   "main": "index.js",
   "license": "MIT",
@@ -12,11 +12,11 @@
     "test": "jest",
     "dev": "npm run typecheck -- --watch & tsx watch ./src/main.ts",
     "clean": "rm -rf dist ./dist",
-    "dev:cli": "node bin/start.js",
+    "dev:cli": "node bin/start",
     "release": "release-it"
   },
   "bin": {
-    "create-typescript-boilerplate": "bin/start.js"
+    "create-typescript-boilerplate": "bin/start"
   },
   "engines": {
     "node": ">=18.17.0",
