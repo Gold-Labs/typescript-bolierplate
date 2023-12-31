@@ -15,7 +15,7 @@
     "dev:cli": "node bin/start.js"
   },
   "bin": {
-    "create-typescript-boilerplate": "bin/cli.js"
+    "typescript-boilerplate": "bin/cli.js"
   },
   "engines": {
     "node": ">=18.17.0",
