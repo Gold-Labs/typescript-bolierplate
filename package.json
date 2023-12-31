@@ -1,6 +1,6 @@
 {
   "name": "create-typescript-boilerplate",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "boilerplate for typescript project",
   "main": "index.js",
   "license": "MIT",
@@ -22,6 +22,12 @@
     "node": ">=18.17.0",
     "npm": "please-use-yarn"
   },
+  "files": [
+    "boilerplate",
+    "dist",
+    "bin",
+    "README.md"
+  ],
   "devDependencies": {
     "@commitlint/config-conventional": "18.4.3",
     "@types/jest": "29.5.3",
