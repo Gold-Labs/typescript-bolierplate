@@ -3,12 +3,11 @@ on:
   push:
     branches:
       - 'main'
+permissions:
+    contents: write
 jobs: 
     release:
         runs-on: ubuntu-20.04
-        permissions:
-          contents: read
-          packages: write
         steps:
             - name: Checkout source code
               uses: actions/checkout@v4
@@ -24,6 +23,7 @@ jobs:
                node-version: 18.x
                registry-url: 'https://registry.npmjs.org'
             - run: yarn
+            - run: cat .npmrc
             - run: yarn release
               env:
                 NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

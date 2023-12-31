@@ -16,7 +16,7 @@
     "release": "release-it"
   },
   "bin": {
-    "create-typescript-boilerplate": "bin/cli.js"
+    "create-typescript-boilerplate": "bin/start.js"
   },
   "engines": {
     "node": ">=18.17.0",
