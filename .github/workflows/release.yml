@@ -1,0 +1,35 @@
+name: Release & Publish to NPM
+on:
+  push:
+    branches:
+      - 'main'
+jobs: 
+    release:
+        runs-on: ubuntu-20.04
+        steps:
+            - name: Checkout source code
+              uses: actions/checkout@v3
+            - name: Set Node.js 18.x
+              uses: actions/setup-node@v3
+              with:
+                node-version: 18.x
+            - name: Initialize Git user
+              run: |
+                 git config --global user.email "keumky2@gmail.com"
+                 git config --global user.name "Release Workflow"
+            - name: Initialize the NPM config
+              run: npm config set //registry.npmjs.org/:_authToken $NPM_TOKEN
+              env:
+                NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+            - name: Run install
+              uses: borales/actions-yarn@v4
+              with:
+                cmd: install
+            - name: Run release
+              uses: borales/actions-yarn@v4
+              with:
+                cmd: release --ci
+              env:
+                GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                NPM_TOKEN : ${{ secrets.NPM_TOKEN }}
+            
