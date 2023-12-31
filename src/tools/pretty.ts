@@ -21,6 +21,7 @@ export const command = (m: string | { m: string; width: number } = '', second = 
 export const direction = (m = '') => p(red(m));
 
 export const warning = (m = '') => p(yellow(m));
+export const error = (m = '') => p(red(m));
 
 export const hr = () => p(` ────────────────────────────────────────────────────`);
 

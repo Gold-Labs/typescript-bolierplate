@@ -2,12 +2,12 @@ import { GluegunToolbox } from 'gluegun';
 import { command, heading, p } from '../tools/pretty';
 
 module.exports = {
+  name: 'help',
   dashed: true,
   alias: ['h'],
-  description: 'Displays create-typescript-boilerplate CLI help',
+  description: 'Displays typescript-boilerplate CLI help',
   run: async (toolbox: GluegunToolbox) => {
     const { meta } = toolbox;
-
     p();
     heading(`Welecome to Create-typescript-boilerplate ${meta.version()}!`);
     p();
