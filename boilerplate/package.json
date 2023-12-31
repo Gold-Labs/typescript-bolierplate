@@ -1,7 +1,6 @@
 {
-  "name": "typescript-boilerplate",
+  "name": "hello-world",
   "version": "0.0.1",
-  "description": "boilerplate for typescript project",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
