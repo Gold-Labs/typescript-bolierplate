@@ -23,7 +23,6 @@ jobs:
                node-version: 18.x
                registry-url: 'https://registry.npmjs.org'
             - run: yarn
-            - run: cat .npmrc
             - run: yarn release
               env:
                 NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
