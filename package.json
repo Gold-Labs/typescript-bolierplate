@@ -12,7 +12,8 @@
     "test": "jest",
     "dev": "npm run typecheck -- --watch & tsx watch ./src/main.ts",
     "clean": "rm -rf dist ./dist",
-    "dev:cli": "node bin/start.js"
+    "dev:cli": "node bin/start.js",
+    "release" : "release-it"
   },
   "bin": {
     "typescript-boilerplate": "bin/cli.js"
