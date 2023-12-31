@@ -1,0 +1,20 @@
+{
+    "git": {
+        "commitMessage": "chore: release ${version}",
+        "tagName": "v${version}",
+        "requireBranch" : "main",
+        "requireUpstream": false,
+        "requireCleanWorkingDir": false,
+        "changelog": "git log --pretty=format:\"* %s (%h)\" ${from}...${to}"
+    },
+    "npm": {
+        "publish": true
+    },
+    "github": {
+        "release": true
+    },
+    "hooks": {
+        "before:init" : "yarn build",
+        "after:bump": "npx auto-changelog -p"
+    }
+}
