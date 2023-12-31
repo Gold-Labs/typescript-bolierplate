@@ -1,0 +1,12 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
+
+if (['v', 'version', '-v', '--v', '-version', '--version'].includes(process.argv[2])) {
+  const contents = require('fs').readFileSync(__dirname + '/../package.json');
+  const package = JSON.parse(contents);
+
+  console.log(`🚀 create-typescript-version: ${package.version}`);
+  process.exit(0);
+}
+
+const sourceDir = __dirname + '/../dist';
+require(sourceDir + '/cli').run(process.argv);
