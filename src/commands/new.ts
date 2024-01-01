@@ -1,6 +1,7 @@
 import { GluegunFilesystem, GluegunPrompt, GluegunSystem, GluegunToolbox } from 'gluegun';
 import { error, p, prefix, startSpinner, stopSpinner, warning } from '../tools/pretty';
 import { copyBoilerplate } from '../tools/filesystem';
+import { cd, exit } from '../tools/process';
 
 const isWindows = process.platform === 'win32';
 
@@ -12,6 +13,7 @@ module.exports = {
   run: async (toolbox: GluegunToolbox) => {
     const { parameters, meta, prompt, filesystem, system } = toolbox;
     const { path } = filesystem;
+
     const userInputName = parameters.first;
     const rootPath = path(`${meta.src}`, '..');
     const boilerplatePath = path(rootPath, 'boilerplate');
@@ -30,10 +32,10 @@ module.exports = {
       excluded: ['.vscode', 'node_modules', 'yarn.lock', 'bun.lockb', 'package-lock.json'],
     });
 
-    process.chdir(targetPath);
+    cd(targetPath);
     changePackageJsonName(packageName, filesystem);
     gitInit(system);
-    process.exit(0);
+    exit();
   },
 };
 
