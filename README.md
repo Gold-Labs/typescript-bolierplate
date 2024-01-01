@@ -1,51 +1,47 @@
-﻿# typescript-bolierplate
+﻿# create-typescript-boilerplate
+create-typescript-boilerplate is a simple CLI tool to create a typescript project. we inspired by <a href="https://github.com/infinitered/ignite">ignite-cli</a>. 
 
-
-clone을 하고나서 yarn과 npm 둘중 선호하는 것을 이용해서 install을 해줍니다.
-
+## Quick Start
+Run the CLI:
 ```bash
-npm install   // npm 일 경우
-yarn install  // yarn 일 경우
+npx create-typescript-boilerplate new myApp
 ```
 
 ## Recommendations
 - IDE - vscode
-- node -v 18.17.0
+- node -v 18.17.1
 - src/main.ts  -> default configuration
 - fnm - node version manager
 - yarn
 
-## Explanation
+## Tech Stack
+|Library|Category|Version|Description|
+|------|---|---|---|
+|tsx|Compiler|v4|Blazing fast on-demand compilation|
+|lefthook|Git hooks manager|v1|Fast and powerful Git hooks manager|
+|jest|Test Runner|v29|Standard test runner for JS apps|
+|prettier|code formatter|v3|Standard code formatter for JS apps|
+|eslint|analyze tools|v8|analyzes code to quickly find problems|
+|typescript|Language|v5|strongly typed programming language|
 
-### 1. Prettier
-.prettierrc을 이용해서 prettier의 설정을 바꿀 수 있습니다.<br>
-기본적으로 많이 사용하는 것을 이용했습니다.<br>
 
-https://prettier.io/docs/en/index.html<br>
-
-
-### 2. Eslint
-.eslintrc.js을 이용해서 eslint의 설정을 바꿀 수 있습니다.<br>
-airbnb를 사용했습니다. 기본적으로 리액트가 아닌 node에 초점을 두었습니다.
-
-https://github.com/eslint/eslint
 
 
 ## Usage
 
-컴파일과 함께 실행
+Run after compilation
 ```
 yarn start    //yarn 일 경우
 npm run start // npm 일 경우
 ```
 
-파일감지(nodemon)실행
+Run file detection (TSX)
 ```
 yarn dev     // yarn 일 경우
 npm run dev  // npm 일 경우
 ```
 
-업그레이드
+upgrade
 ```
 yarn upgrade-interactive [--latest]
 ```
